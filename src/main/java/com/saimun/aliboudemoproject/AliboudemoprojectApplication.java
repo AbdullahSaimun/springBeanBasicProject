@@ -9,6 +9,8 @@ public class AliboudemoprojectApplication {
 
 	public static void main(String[] args) {
 		var ctx = SpringApplication.run(AliboudemoprojectApplication.class, args);
+//		MyFirstClassNew myFirstClassNew = ctx.getBean(MyFirstClassNew.class,"myFirstClassNew");
+//		MyFirstClassNew myFirstClassNew = (MyFirstClassNew) ctx.getBean("myFirstClass");
 		MyFirstClassNew myFirstClassNew = ctx.getBean(MyFirstClassNew.class);
 		System.out.println(myFirstClassNew.sayHello());
 	}
