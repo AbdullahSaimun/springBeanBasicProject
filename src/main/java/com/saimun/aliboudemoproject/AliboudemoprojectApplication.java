@@ -15,9 +15,6 @@ public class AliboudemoprojectApplication {
 		System.out.println(myFirstClassNew.sayHello());
 	}
 
-	@Bean
-	public MyFirstClassNew myFirstClass() {
-		return new MyFirstClassNew();
-	}
+
 
 }
