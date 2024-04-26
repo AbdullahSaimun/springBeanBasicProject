@@ -7,7 +7,7 @@ import org.springframework.context.annotation.Configuration;
 public class ApplicationConfig {
 	@Bean(name = "beanNameFromMyFristClass")
 	public MyFirstClassNew myFirstClass() {
-		return new MyFirstClassNew();
+		return new MyFirstClassNew("saimun");
 	}
 
 }
