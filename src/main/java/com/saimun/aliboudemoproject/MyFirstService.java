@@ -8,7 +8,8 @@ import org.springframework.stereotype.Service;
 public class MyFirstService {
 
 	@Autowired
-	private @Qualifier("second") MyFirstClassNew myFirstClass;
+	@Qualifier("first")
+	private MyFirstClassNew myFirstClass;
 
 /*	construction injection
 	@Autowired
