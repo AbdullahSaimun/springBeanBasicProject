@@ -2,15 +2,22 @@ package com.saimun.aliboudemoproject;
 
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.beans.factory.annotation.Qualifier;
+import org.springframework.core.env.Environment;
 import org.springframework.stereotype.Service;
 
 @Service
 public class MyFirstService {
 
 	private MyFirstClassNew myFirstClassNew;
+	private Environment environment;
 
 
-//	method injection
+	@Autowired
+	public void setEnvironment(Environment environment) {
+		this.environment = environment;
+	}
+
+	//	method injection
 	@Autowired
 	public void injectDependencies(@Qualifier("first") MyFirstClassNew myFirstClassNew) {
 		this.myFirstClassNew = myFirstClassNew;
@@ -29,5 +36,9 @@ public class MyFirstService {
 
 	public String tellAStory() {
 		return STR."dependency injection is saying \{myFirstClassNew.sayHello()}";
+	}
+
+	public String getJavaVersion() {
+		return environment.getProperty("java.version");
 	}
 }

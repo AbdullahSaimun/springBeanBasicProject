@@ -11,6 +11,7 @@ public class AliboudemoprojectApplication {
 		var ctx = SpringApplication.run(AliboudemoprojectApplication.class, args);
 		MyFirstService myFirstService = ctx.getBean(MyFirstService.class);
 		System.out.println(myFirstService.tellAStory());
+		System.out.println(myFirstService.getJavaVersion());
 	}
 
 
