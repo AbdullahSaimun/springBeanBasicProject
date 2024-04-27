@@ -10,7 +10,7 @@ public class MyFirstService {
 	private MyFirstClassNew myFirstClassNew;
 
 
-//	setter injection
+//	method injection
 	@Autowired
 	public void injectDependencies(@Qualifier("first") MyFirstClassNew myFirstClassNew) {
 		this.myFirstClassNew = myFirstClassNew;
