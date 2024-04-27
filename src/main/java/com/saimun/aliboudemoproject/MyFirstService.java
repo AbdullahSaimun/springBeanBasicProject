@@ -12,6 +12,7 @@ public class MyFirstService {
 	private Environment environment;
 
 
+//	setter injection
 	@Autowired
 	public void setEnvironment(Environment environment) {
 		this.environment = environment;
