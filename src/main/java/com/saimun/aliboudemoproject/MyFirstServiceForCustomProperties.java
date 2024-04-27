@@ -3,10 +3,12 @@ package com.saimun.aliboudemoproject;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.beans.factory.annotation.Qualifier;
 import org.springframework.beans.factory.annotation.Value;
+import org.springframework.context.annotation.PropertySource;
 import org.springframework.core.env.Environment;
 import org.springframework.stereotype.Service;
 
 @Service
+@PropertySource("classpath:custom.properties")
 public class MyFirstServiceForCustomProperties {
 
 	private MyFirstClassNew myFirstClassNew;
@@ -14,6 +16,9 @@ public class MyFirstServiceForCustomProperties {
 
 	@Value("${my.name.full.name}")
 	private String myNameFromCustomProperties;
+
+	@Value("${my.address}")
+	private String myAddressFromProperties;
 
 
 //	setter injection
@@ -29,7 +34,7 @@ public class MyFirstServiceForCustomProperties {
 	}
 
 	public String getPropertyName() {
-		return STR."name from property \{myNameFromCustomProperties}";
+		return STR."name from property \{myNameFromCustomProperties} and address is \{myAddressFromProperties}";
 	}
 
 
