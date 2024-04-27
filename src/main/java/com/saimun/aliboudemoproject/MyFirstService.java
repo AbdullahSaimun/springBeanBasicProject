@@ -7,9 +7,19 @@ import org.springframework.stereotype.Service;
 @Service
 public class MyFirstService {
 
+	private MyFirstClassNew myFirstClassNew;
+
+
+//	setter injection
+	@Autowired
+	public void injectDependencies(@Qualifier("first") MyFirstClassNew myFirstClassNew) {
+		this.myFirstClassNew = myFirstClassNew;
+	}
+
+/*	field injection
 	@Autowired
 	@Qualifier("first")
-	private MyFirstClassNew myFirstClass;
+	private MyFirstClassNew myFirstClass;*/
 
 /*	construction injection
 	@Autowired
@@ -18,6 +28,6 @@ public class MyFirstService {
 	}*/
 
 	public String tellAStory() {
-		return STR."dependency injection is saying \{myFirstClass.sayHello()}";
+		return STR."dependency injection is saying \{myFirstClassNew.sayHello()}";
 	}
 }
