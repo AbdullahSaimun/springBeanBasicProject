@@ -20,6 +20,9 @@ public class MyFirstServiceForCustomProperties {
 	@Value("${my.address}")
 	private String myAddressFromProperties;
 
+	@Value("${my.phone}")
+	private Integer myNumber;
+
 
 //	setter injection
 	@Autowired
@@ -34,7 +37,7 @@ public class MyFirstServiceForCustomProperties {
 	}
 
 	public String getPropertyName() {
-		return STR."name from property \{myNameFromCustomProperties} and address is \{myAddressFromProperties}";
+		return STR."name from property \{myNameFromCustomProperties} and address is \{myAddressFromProperties} and phone number is \{myNumber}";
 	}
 
 
