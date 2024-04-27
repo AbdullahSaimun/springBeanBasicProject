@@ -13,7 +13,7 @@ public class AliboudemoprojectApplication {
 		System.out.println(myFirstService.tellAStory());
 		System.out.println(myFirstService.getJavaVersion());
 		System.out.println(myFirstService.getOsName());
-		System.out.println(myFirstService.getFullName());
+		System.out.println(myFirstService.readProperty());
 	}
 
 
