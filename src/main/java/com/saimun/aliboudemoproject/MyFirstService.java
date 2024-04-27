@@ -45,4 +45,8 @@ public class MyFirstService {
 	public String getOsName() {
 		return environment.getProperty("os.name");
 	}
+
+	public String getFullName() {
+		return environment.getProperty("my.name.full.name");
+	}
 }
