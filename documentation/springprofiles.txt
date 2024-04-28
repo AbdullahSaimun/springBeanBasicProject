@@ -16,3 +16,5 @@ like set dev environment.
       		app.setDefaultProperties(Collections.singletonMap("spring.profiles.active","test"));
       		var ctx = app.run( args);
     -
+ 4. Bean only available on specific profile
+    - use @Profile("dev") annotation to set specific bean profile
