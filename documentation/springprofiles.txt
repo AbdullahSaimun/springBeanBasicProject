@@ -19,3 +19,5 @@ like set dev environment.
  4. Bean only available on specific profile
     - use @Profile("dev") annotation to set specific bean profile
     - also set @Profile("dev") annotation in the class level
+
+ 5. take cautious when use profile. because it is developer responsibility to apply.
