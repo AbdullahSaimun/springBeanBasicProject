@@ -8,6 +8,11 @@ like set dev environment.
 2. - set spring.profiles.active=dev in the application.properties file to activate the dev profile.
    - can set multiple profile in the with comma separated. like spring.profiles.active=dev,test,custom
    - it firstly get all info from application.properties then dev override the application, after test override the
-   dev. Lastly custom override the test properties value. Finally get info from custom.properties if it exists (always
+   dev. Lastly custom override the test properties value. Finally, get info from custom.properties if it exists (always
    get the last profile info). so order is important.
    -
+ 3. set profile programmatically
+    - var app = new SpringApplication(AliboudemoprojectApplication.class);
+      		app.setDefaultProperties(Collections.singletonMap("spring.profiles.active","test"));
+      		var ctx = app.run( args);
+    -
