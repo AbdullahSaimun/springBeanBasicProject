@@ -1,0 +1,7 @@
+- environment specific development
+- certain only active in development env. and other on production
+- like different database
+- can enable and disable the features.
+
+1. set profile in the edit configuration in the application
+like set dev environment.

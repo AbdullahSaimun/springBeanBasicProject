@@ -9,7 +9,7 @@ public class AliboudemoprojectApplication {
 
 	public static void main(String[] args) {
 		var ctx = SpringApplication.run(AliboudemoprojectApplication.class, args);
-		MyFirstServiceForCustomProperties myFirstService = ctx.getBean(MyFirstServiceForCustomProperties.class);
+		MyFirstServiceForCustomProfiles myFirstService = ctx.getBean(MyFirstServiceForCustomProfiles.class);
 		System.out.println(myFirstService.getPropertyName());
 
 	}
