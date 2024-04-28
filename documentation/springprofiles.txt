@@ -5,3 +5,4 @@
 
 1. set profile in the edit configuration in the application
 like set dev environment.
+2. set spring.profiles.active=dev in the application.properties file to activate the dev profile.
